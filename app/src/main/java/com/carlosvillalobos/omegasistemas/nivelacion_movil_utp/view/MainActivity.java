@@ -1,4 +1,4 @@
-package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp;
+package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -7,10 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.R;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.MainMVP;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.TaskAdapter;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainMVP.View {
 
     private TextInputLayout tilNewTask;
     private TextInputEditText etNewTask;

@@ -1,4 +1,4 @@
-package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp;
+package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.R;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto.TaskItem;
 
 import java.util.ArrayList;
 import java.util.List;

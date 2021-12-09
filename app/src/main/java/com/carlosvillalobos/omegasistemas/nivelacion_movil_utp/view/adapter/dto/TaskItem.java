@@ -1,4 +1,4 @@
-package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp;
+package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto;
 
 public class TaskItem {
     private String description;
