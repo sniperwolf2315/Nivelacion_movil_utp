@@ -9,9 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.R;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.MainMVP;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.presenter.MainPresenter;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.TaskAdapter;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto.TaskItem;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MainMVP.View {
 
@@ -20,13 +24,18 @@ public class MainActivity extends AppCompatActivity implements MainMVP.View {
     private RecyclerView rvTasks;
 
     private TaskAdapter taskAdapter;
+    private MainMVP.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        presenter = new MainPresenter(MainActivity.this);
+
         initUI();
+
+        presenter.loadTasks();
     }
 
     private void initUI() {
@@ -43,4 +52,10 @@ public class MainActivity extends AppCompatActivity implements MainMVP.View {
         rvTasks.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         rvTasks.setAdapter(taskAdapter);
     }
+
+    @Override
+    public void showTaskList(List<TaskItem> items) {
+        taskAdapter.setData (items);
+    }
+
 }
