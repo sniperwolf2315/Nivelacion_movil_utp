@@ -1,5 +1,6 @@
 package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.R;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.presenter.MainPresenter;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto.TaskItem;
 
 import java.util.ArrayList;
@@ -23,13 +25,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     }
 
     public void setData(List<TaskItem> data) {
+        Log.i(MainPresenter.class.getSimpleName(), "set data");
         this.data = data;
         notifyDataSetChanged();
     }
 
     public void addItem(TaskItem item) {
+        Log.i(MainPresenter.class.getSimpleName(), "add new item");
         data.add(item);
-        notifyItemInserted(data.size() - 1);
+        notifyDataSetChanged();
+        //notifyItemInserted(data.size() - 1);
     }
 
     @NonNull
