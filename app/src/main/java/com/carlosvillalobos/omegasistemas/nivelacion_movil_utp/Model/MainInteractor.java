@@ -12,7 +12,7 @@ public class MainInteractor implements MainMVP.Model {
 
     public MainInteractor() {
         tempItems = new ArrayList<>();
-        tempItems.add(new TaskItem( "do the shoping" , "December 9, 2021"));
+
     }
 
 
