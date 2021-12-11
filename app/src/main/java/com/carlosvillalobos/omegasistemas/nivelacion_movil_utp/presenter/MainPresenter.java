@@ -4,6 +4,7 @@ import android.util.Log;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.MainInteractor;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.MainMVP;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto.TaskItem;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto.TaskState;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -37,6 +38,14 @@ public class MainPresenter implements MainMVP.Presenter {
         TaskItem task = new TaskItem(description, date);
         model.saveTask(task);
         view.addTaskToList(task);
+
+    }
+
+    @Override
+    public void taskItemClicked(TaskItem item) {
+        item.setState(TaskState.DONE);
+        model.updateTask(item);
+        view.updateTask(item);
 
     }
 }

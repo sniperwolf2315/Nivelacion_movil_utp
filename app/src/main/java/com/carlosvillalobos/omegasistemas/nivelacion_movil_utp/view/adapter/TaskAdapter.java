@@ -22,6 +22,7 @@ import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     private List<TaskItem> data;
+    private OnItemClickListener listener;
 
     public TaskAdapter() {
         data = new ArrayList<>();
@@ -37,7 +38,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         Log.i(MainPresenter.class.getSimpleName(), "add new item");
         data.add(item);
         notifyDataSetChanged();
-        //notifyItemInserted(data.size() - 1);
+        notifyItemInserted(data.size() - 1);
+    }
+
+    public void setListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -52,6 +57,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TaskItem item = data.get(position);
+
+        if (listener != null){
+            holder.itemView.setOnClickListener(v -> listener.onClick(item));
+        }
+
         holder.tvDescription.setText(item.getDescription());
         holder.tvDate.setText(item.getDate());
         int color = item.getState() == TaskState.PENDING ? R.color.task_pending :R.color.task_done;
@@ -67,6 +77,20 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         return data == null ? 0 : data.size();
     }
 
+    public void updateTask(TaskItem task) {
+        for (int i = 0 ; i < data.size(); i++) {
+            TaskItem item = data.get(i);
+            if (item.getDescription().equals(task.getDescription())
+            && item.getDate().equals(task.getDate())){
+                item.setState(task.getState());
+                notifyItemChanged(i);
+                break;
+
+            }
+            
+        }
+    }
+
     protected class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView ivIcon;
         private final TextView tvDescription;
@@ -80,4 +104,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
             tvDate = itemView.findViewById(R.id.tv_date);
         }
     }
+
+    public interface OnItemClickListener{
+        void onClick(TaskItem task);
+    }
 }
+
