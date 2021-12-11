@@ -23,6 +23,7 @@ import java.util.List;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     private List<TaskItem> data;
     private OnItemClickListener listener;
+    private OnItemClickListener longlistener;
 
     public TaskAdapter() {
         data = new ArrayList<>();
@@ -41,8 +42,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         notifyItemInserted(data.size() - 1);
     }
 
-    public void setListener(OnItemClickListener listener) {
+    public void setClickListener(OnItemClickListener listener) {
         this.listener = listener;
+    }
+
+    public void setLongClickListener(OnItemClickListener listener) {
+        this.longlistener= listener;
     }
 
     @NonNull
@@ -60,6 +65,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         if (listener != null){
             holder.itemView.setOnClickListener(v -> listener.onClick(item));
+
+        }
+        if (longlistener != null){
+            holder.itemView.setOnLongClickListener(v -> {
+                longlistener.onClick(item);
+                return false;
+            });
+
         }
 
         holder.tvDescription.setText(item.getDescription());
@@ -81,6 +94,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         int i = data.indexOf(task);
         TaskItem item = data.get(i);
         notifyItemChanged(i);
+
+    }
+
+    public void removeTask(TaskItem task) {
+        int i = data.indexOf(task);
+        data.remove(i);
+        notifyItemRemoved(i);
 
     }
 

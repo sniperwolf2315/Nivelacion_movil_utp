@@ -12,8 +12,8 @@ import java.util.List;
 
 public class MainPresenter implements MainMVP.Presenter {
 
-    private MainMVP.View view;
-    private MainMVP.Model model;
+    private final MainMVP.View view;
+    private final MainMVP.Model model;
 
     public MainPresenter(MainMVP.View view){
 
@@ -42,10 +42,36 @@ public class MainPresenter implements MainMVP.Presenter {
     }
 
     @Override
-    public void taskItemClicked(TaskItem item) {
-        item.setState(TaskState.DONE);
-        model.updateTask(item);
-        view.updateTask(item);
+    public void taskItemClicked(TaskItem task) {
+        String mesagge = task.getState() == TaskState.PENDING
+                ? "Desea marcar como terminada esta tarea ?"
+                : "Desea marcar como pendiente esta tarea ?" ;
+        view.showConfirmDialog(mesagge, task);
+
 
     }
+
+    @Override
+    public void updateTask(TaskItem task) {
+        task.setState(task.getState() == TaskState.PENDING ? TaskState.DONE: TaskState.PENDING);
+        model.updateTask(task);
+        view.updateTask(task);
+
+    }
+
+    @Override
+    public void taskItemLongClicked(TaskItem task) {
+        if (task.getState() == TaskState.DONE) {
+            view.showDeleteDialog("would you like Remove this task ?", task);
+        }
+
+    }
+
+    @Override
+    public void deleteTask(TaskItem task) {
+        model.deleteTask(task);
+        view.deleteTask(task);
+
+    }
+
 }
