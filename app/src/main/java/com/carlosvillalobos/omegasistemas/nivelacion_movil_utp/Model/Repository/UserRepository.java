@@ -10,9 +10,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.com.cesardiaz.misiontic.ventasdomiciliog1.model.database.SalesDatabase;
-import co.com.cesardiaz.misiontic.ventasdomiciliog1.model.database.dao.UserDao;
-import co.com.cesardiaz.misiontic.ventasdomiciliog1.model.database.entities.User;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.database.SalesDatabase;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.database.dao.UserDao;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.database.entities.User;
 
 public class UserRepository {
 

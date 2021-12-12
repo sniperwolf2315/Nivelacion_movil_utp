@@ -2,27 +2,16 @@ package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
-import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.database.entities.User;
-import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.http.dto.ProductRequest;
-import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.http.dto.ProductResponse;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.FirebaseAuthRepository;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.GmailAuthRepository;
-import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.ProductRepository;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.UserRepository;
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.LoginMVP;
 
 public class LoginInteractor implements LoginMVP.Model {
 
     private UserRepository userRepository;
-    private ProductRepository productRepository;
     private FirebaseAuthRepository firebaseAuthRepository;
     private GmailAuthRepository gmailAuthRepository;
 
@@ -30,7 +19,7 @@ public class LoginInteractor implements LoginMVP.Model {
         firebaseAuthRepository = FirebaseAuthRepository.getInstance(context);
         gmailAuthRepository = GmailAuthRepository.getInstance(context);
         userRepository = UserRepository.getInstance(context);
-        productRepository = new ProductRepository();
+
     }
 
     @Override

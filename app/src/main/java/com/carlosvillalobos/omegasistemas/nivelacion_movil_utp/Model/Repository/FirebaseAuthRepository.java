@@ -6,7 +6,7 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import co.com.cesardiaz.misiontic.ventasdomiciliog1.model.database.entities.User;
+import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.database.entities.User;
 
 public class FirebaseAuthRepository {
 
@@ -19,12 +19,12 @@ public class FirebaseAuthRepository {
         return instance;
     }
 
-    private co.com.cesardiaz.misiontic.ventasdomiciliog1.model.repository.UserRepository userRepository;
+    private com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.UserRepository userRepository;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser currentUser;
 
     private FirebaseAuthRepository(Context context) {
-        this.userRepository = co.com.cesardiaz.misiontic.ventasdomiciliog1.model.repository.UserRepository.getInstance(context);
+        this.userRepository = com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.UserRepository.getInstance(context);
         this.firebaseAuth = FirebaseAuth.getInstance();
     }
 

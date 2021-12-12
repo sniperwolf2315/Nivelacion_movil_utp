@@ -115,12 +115,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         etPassword.setText("");
     }
 
-    @Override
-    public void openPaymentsActivity() {
-        Intent intent = new Intent(this, PaymentsActivity.class);
-        startActivity(intent);
 
-    }
+
+
 
     @Override
     public void startWaiting() {

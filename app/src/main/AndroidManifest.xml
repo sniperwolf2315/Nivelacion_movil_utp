@@ -4,7 +4,7 @@
     package="com.carlosvillalobos.omegasistemas.nivelacion_movil_utp">
 
     <uses-sdk
-        android:minSdkVersion="26"
+        android:minSdkVersion="22"
         android:targetSdkVersion="31" />
 
     <application

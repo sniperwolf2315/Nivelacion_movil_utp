@@ -1,7 +1,6 @@
 package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 public interface LoginMVP {
@@ -48,13 +47,14 @@ public interface LoginMVP {
 
         void clearData();
 
-        void openPaymentsActivity();
 
         void startWaiting();
 
         void stopWaiting();
 
         void openGoogleSignInActivity(Intent intent);
+
+        void MainActivity();
     }
 
     class LoginInfo {

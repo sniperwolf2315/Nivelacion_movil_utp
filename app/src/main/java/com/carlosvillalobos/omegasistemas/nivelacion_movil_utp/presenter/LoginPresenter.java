@@ -52,7 +52,7 @@ public class LoginPresenter implements LoginMVP.Presenter {
                             public void onSuccess() {
                                 view.getActivity().runOnUiThread(() -> {
                                     view.stopWaiting();
-                                    view.openPaymentsActivity();
+                                    view.MainActivity();
                                 });
                             }
 
@@ -74,7 +74,7 @@ public class LoginPresenter implements LoginMVP.Presenter {
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() >= 8;
+        return password.length() >= 6;
     }
 
     @Override
@@ -92,7 +92,7 @@ public class LoginPresenter implements LoginMVP.Presenter {
     public void isAuthenticated() {
         boolean isAuthenticated = model.isAuthenticated();
         if (isAuthenticated) {
-            view.openPaymentsActivity();
+            view.MainActivity();
         }
     }
 
@@ -105,7 +105,7 @@ public class LoginPresenter implements LoginMVP.Presenter {
             public void onSuccess() {
                 view.getActivity().runOnUiThread(() -> {
                     view.stopWaiting();
-                    view.openPaymentsActivity();
+                    view.MainActivity();
                 });
             }
 

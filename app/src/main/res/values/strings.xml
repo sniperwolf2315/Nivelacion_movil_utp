@@ -32,4 +32,8 @@
     <string name="newsale_date">Siguiente pago</string>
     <string name="newsale_save">Guardar venta</string>
     <string name="title_activity_location">LocationActivity</string>
+    <string name="logo_description">logo_description</string>
+    <string name="email">\@string/email</string>
+    <string name="password">password</string>
+    <string name="iniciar_sesion">iniciar_sesion</string>
 </resources>
