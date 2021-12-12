@@ -4,19 +4,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="8dp"
     tools:context=".view.ActivityLogin">
 
     <ImageView
         android:id="@+id/iv_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/iv_width"
+        android:layout_height="@dimen/iv_height"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/til_margintop"
-        android:layout_marginBottom="@dimen/til_marginbottom"
         android:contentDescription="@string/logo_description"
         android:src="@mipmap/ic_launcher_round" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/til_margintop"
+        android:padding="@dimen/til_margintop"
+        android:layout_gravity="center"
+        android:layout_weight="1">
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -58,5 +65,6 @@
         android:background="#07AEFA"
         android:layout_marginTop="@dimen/til_marginbottom"
         android:text="@string/iniciar_sesion"/>
+</LinearLayout>
 
 </LinearLayout>
