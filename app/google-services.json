@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058020388485",
+    "project_id": "nivelacion-movil-utp",
+    "storage_bucket": "nivelacion-movil-utp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058020388485:android:8eb58ae930e0350ba043ec",
+        "android_client_info": {
+          "package_name": "com.carlosvillalobos.omegasistemas.nivelacion_movil_utp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058020388485-rej7952r5du7ds697ijun4nl9hahrr2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMRijuAsZWkkMq05xYTWKPbJ_e90aIAtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058020388485-rej7952r5du7ds697ijun4nl9hahrr2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
