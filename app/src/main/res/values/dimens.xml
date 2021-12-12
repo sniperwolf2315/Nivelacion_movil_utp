@@ -4,5 +4,21 @@
     <dimen name="iv_width">250dp</dimen>
     <dimen name="til_margintop">16dp</dimen>
     <dimen name="til_marginbottom">24dp</dimen>
+    <dimen name="window_padding">16dp</dimen>
 
-    </resources>
+    <dimen name="logo_width">200dp</dimen>
+    <dimen name="logo_height">200dp</dimen>
+    <dimen name="logo_margin_top">48dp</dimen>
+    <dimen name="logo_margin_bottom">36dp</dimen>
+
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="fab_margin_end">16dp</dimen>
+    <dimen name="fab_margin_bottom">16dp</dimen>
+
+    <dimen name="text_important">24sp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="payments_image_width">48dp</dimen>
+    <dimen name="payments_image_height">48dp</dimen>
+
+</resources>
