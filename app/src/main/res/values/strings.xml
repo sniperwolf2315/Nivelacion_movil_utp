@@ -10,4 +10,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="email">correo electronico</string>
+    <string name="password">contraseña</string>
+    <string name="iniciar_sesion">iniciar sesion</string>
+    <string name="logo_description">logo de la application</string>
 </resources>

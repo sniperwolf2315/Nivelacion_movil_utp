@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class ActivityLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
