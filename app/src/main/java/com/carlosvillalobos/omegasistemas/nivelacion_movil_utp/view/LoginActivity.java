@@ -140,4 +140,9 @@ public class LoginActivity extends AppCompatActivity implements LoginMVP.View {
         googleLauncher.launch(intent);
     }
 
+    @Override
+    public void MainActivity() {
+
+    }
+
 }

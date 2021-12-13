@@ -20,8 +20,8 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginStart="@dimen/til_margintop"
-        android:padding="@dimen/til_margintop"
+        android:layout_marginStart="@dimen/small_margin"
+        android:padding="@dimen/window_padding"
         android:layout_gravity="center"
         android:layout_weight="1">
 
@@ -31,7 +31,7 @@
         android:hint="@string/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/til_margintop"
+        android:layout_marginBottom="@dimen/default_margin"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -47,7 +47,7 @@
         android:hint="@string/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/til_margintop"
+        android:layout_marginBottom="@dimen/default_margin"
         app:endIconMode="password_toggle">>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -63,8 +63,8 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:background="#07AEFA"
-        android:layout_marginTop="@dimen/til_marginbottom"
-        android:text="@string/iniciar_sesion"/>
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/login_email"/>
 </LinearLayout>
 
 </LinearLayout>

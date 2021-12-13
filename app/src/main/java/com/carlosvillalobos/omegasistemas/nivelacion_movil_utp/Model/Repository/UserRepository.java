@@ -43,15 +43,15 @@ public class UserRepository {
     private void loadInitalDatabase() {
         if (USE_DATABASE) {
             userDao.insert(
-                    new User("Cesar Diaz", "cdiaz@email.com", "12345678"),
-                    new User("Usuario de Pruebas", "test@email.com", "87654321")
+                    new User("Carlos", "carvilf@gmail.com", "123456"),
+                    new User("Usuario de Pruebas", "carvilf@gmail.com", "123456")
             );
         } else {
-            String username = "cdiaz@email.com".replace('@', '_').replace('.', '_');
+            String username = "carvilf@gmail.com".replace('@', '_').replace('.', '_');
 
-            userRef.child(username).child("name").setValue("Cesar Diaz");
-            userRef.child(username).child("email").setValue("cdiaz@email.com");
-            userRef.child(username).child("password").setValue("12345678");
+            userRef.child(username).child("name").setValue("Carlos");
+            userRef.child(username).child("email").setValue("carvilf@gmail.com");
+            userRef.child(username).child("password").setValue("123456");
 
             username = "test@email.com".replace('@', '_').replace('.', '_');
             userRef.child(username)
