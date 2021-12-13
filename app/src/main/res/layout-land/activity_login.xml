@@ -13,7 +13,7 @@
         android:layout_width="@dimen/iv_width"
         android:layout_height="@dimen/iv_height"
         android:layout_gravity="center"
-        android:contentDescription="@string/logo_description"
+        android:contentDescription="@string/login_logo_description"
         android:src="@mipmap/ic_launcher_round" />
 
     <LinearLayout
@@ -28,7 +28,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_correo"
-        android:hint="@string/email"
+        android:hint="@string/login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
@@ -44,11 +44,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_password"
-        android:hint="@string/password"
+        android:hint="@string/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
-        app:endIconMode="password_toggle">>
+        app:endIconMode="password_toggle"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"

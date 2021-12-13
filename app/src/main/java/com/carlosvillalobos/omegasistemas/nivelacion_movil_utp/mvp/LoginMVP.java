@@ -58,8 +58,8 @@ public interface LoginMVP {
     }
 
     class LoginInfo {
-        private String email;
-        private String password;
+        private final String email;
+        private final String password;
 
         public LoginInfo(String email, String password) {
             this.email = email;

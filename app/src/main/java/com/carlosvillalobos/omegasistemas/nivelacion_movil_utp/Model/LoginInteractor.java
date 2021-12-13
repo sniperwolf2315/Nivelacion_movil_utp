@@ -11,9 +11,9 @@ import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.LoginMVP;
 
 public class LoginInteractor implements LoginMVP.Model {
 
-    private UserRepository userRepository;
-    private FirebaseAuthRepository firebaseAuthRepository;
-    private GmailAuthRepository gmailAuthRepository;
+    private final UserRepository userRepository;
+    private final FirebaseAuthRepository firebaseAuthRepository;
+    private final GmailAuthRepository gmailAuthRepository;
 
     public LoginInteractor(Context context) {
         firebaseAuthRepository = FirebaseAuthRepository.getInstance(context);

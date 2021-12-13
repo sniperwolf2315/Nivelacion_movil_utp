@@ -32,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
-        android:hint="@string/login_email">
+        android:hint="@string/login_email"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
@@ -49,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
         android:hint="@string/login_password"
-        app:endIconMode="password_toggle">
+        app:endIconMode="password_toggle"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"

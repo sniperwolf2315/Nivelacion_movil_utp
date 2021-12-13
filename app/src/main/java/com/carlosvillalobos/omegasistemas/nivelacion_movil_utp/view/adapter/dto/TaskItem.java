@@ -3,8 +3,8 @@ package com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.view.adapter.dto
 import java.util.Objects;
 
 public class TaskItem {
-    private String description;
-    private String date;
+    private final String description;
+    private final String date;
     private TaskState state;
 
     public TaskItem(String description, String date) {

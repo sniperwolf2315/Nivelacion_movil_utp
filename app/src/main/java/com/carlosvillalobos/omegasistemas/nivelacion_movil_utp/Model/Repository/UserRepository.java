@@ -27,9 +27,9 @@ public class UserRepository {
 
     private final static Boolean USE_DATABASE = Boolean.FALSE;
 
-    private UserDao userDao;
+    private final UserDao userDao;
 
-    private DatabaseReference userRef;
+    private final DatabaseReference userRef;
 
     private UserRepository(Context context) {
         userDao = SalesDatabase.getDatabase(context).getUserDao();

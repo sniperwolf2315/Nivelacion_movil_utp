@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MainInteractor implements MainMVP.Model {
 
-    private List<TaskItem> tempItems;
+    private final List<TaskItem> tempItems;
 
     public MainInteractor() {
         tempItems = new ArrayList<>();

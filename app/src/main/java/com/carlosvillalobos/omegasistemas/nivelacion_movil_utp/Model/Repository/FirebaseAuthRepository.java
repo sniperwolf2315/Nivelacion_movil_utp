@@ -19,8 +19,8 @@ public class FirebaseAuthRepository {
         return instance;
     }
 
-    private com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.UserRepository userRepository;
-    private FirebaseAuth firebaseAuth;
+    private final com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.UserRepository userRepository;
+    private final FirebaseAuth firebaseAuth;
     private FirebaseUser currentUser;
 
     private FirebaseAuthRepository(Context context) {

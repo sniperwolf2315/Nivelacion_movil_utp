@@ -25,10 +25,10 @@ public class GmailAuthRepository {
         return instance;
     }
 
-    private Context context;
-    private GoogleSignInClient googleSignInClient;
+    private final Context context;
+    private final GoogleSignInClient googleSignInClient;
     private GoogleSignInAccount account;
-    private com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.FirebaseAuthRepository firebaseAuthRepository;
+    private final com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.Model.Repository.FirebaseAuthRepository firebaseAuthRepository;
 
     private GmailAuthRepository(Context context) {
         this.context = context;

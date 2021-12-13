@@ -8,8 +8,8 @@ import com.carlosvillalobos.omegasistemas.nivelacion_movil_utp.mvp.LoginMVP;
 
 public class LoginPresenter implements LoginMVP.Presenter {
 
-    private LoginMVP.View view;
-    private LoginMVP.Model model;
+    private final LoginMVP.View view;
+    private final LoginMVP.Model model;
 
     public LoginPresenter(LoginMVP.View view) {
         this.view = view;
